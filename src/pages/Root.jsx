@@ -7,12 +7,8 @@ function Root() {
   const outlet = useOutlet();
   return (
     <>
-      {outlet || (
-        <>
-          <Header />
-          <Home />
-        </>
-      )}
+      <Header />
+      {outlet || <Home />}
     </>
   );
 }
