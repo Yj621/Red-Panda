@@ -8,6 +8,10 @@ header {
   background-color: transparent;
 }
 
+a {
+  text-decoration: none;
+}
+
 .headerBox {
   display: flex;
   gap: 2.7rem;
@@ -19,6 +23,12 @@ header {
   font-weight: 400;
 }
 
+.headerItemActive {
+  color: #191970;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 .headerButton {
   width: 7.9375rem;
   height: 2.6875rem;
@@ -28,6 +38,9 @@ header {
   font-size: 1.25rem;
   font-weight: 400;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .headerButton:hover {
