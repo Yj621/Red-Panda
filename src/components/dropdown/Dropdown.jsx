@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Dropdown.css";
 
-export default function Dropdown() {
-  const [selectedItem, setSelectedItem] = useState(""); // 선택된 아이템을 저장할 상태 변수
-
+export default function Dropdown({
+  setIsDropdownOpen,
+  setSelectedItem,
+  selectedItem,
+}) {
   const handleItemClick = (item) => {
     setSelectedItem(item); // 선택된 아이템을 상태 변수에 저장
+    setIsDropdownOpen(false);
   };
   return (
     <ul className="dropdownList">

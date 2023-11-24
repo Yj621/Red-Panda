@@ -1,3 +1,9 @@
+import DropdownBox from "../../components/dropdown/DropdownBox";
+
 export default function Main() {
-  return <div></div>;
+  return (
+    <div>
+      <DropdownBox />
+    </div>
+  );
 }
