@@ -1,21 +1,21 @@
 import "./MainBox.css";
-import image from "../../images/teamlogo.jpeg";
 
-export default function MainBox({ imageUrl }) {
+export default function MainBox(props) {
+  const { title, content, imageUrl, date, author } = props;
   return (
     <div className="mainBoxLayout">
-      <img className="mainBoxImage" src={image} alt="미리보기" />
+      <img className="mainBoxImage" src={imageUrl} alt="미리보기" />
       <div className="mainBox">
         <div className="mainBoxContent">
-          <h1>TitleTitleTitleTitleTitleTitleTitleTitleTitle</h1>
-          <h2>ContentContentContentContentContentContentContent</h2>
+          <h1>{title}</h1>
+          <h2>{content}</h2>
         </div>
-        <h3>2023년 11월 15일</h3>
+        <h3>{date}</h3>
       </div>
       <div className="mainBoxProfile">
         <img className="mainBoxProfileImage" alt="profile" />
         <h4>by</h4>
-        <h5>최지은</h5>
+        <h5>{author}</h5>
       </div>
     </div>
   );
