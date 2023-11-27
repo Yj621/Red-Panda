@@ -1,0 +1,89 @@
+.detailPageLayout {
+  display: flex;
+  flex-direction: column;
+  margin: 4.69rem auto 13rem auto;
+  align-items: center;
+}
+
+.detailPageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.31rem;
+}
+
+.detailPageProfileBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4.94rem;
+}
+
+.detailPageDate {
+  display: flex;
+  align-items: flex-end;
+  color: #191970;
+}
+
+.detailPageProfile {
+  display: flex;
+  gap: 0.81rem;
+  align-items: center;
+  color: #36454f;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.detailPageProfileImage {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+
+.detailPageBox {
+  display: flex;
+  align-items: center;
+  gap: 1.19rem;
+}
+
+.detailPageImage {
+  width: 62.5625rem;
+  height: 31.25rem;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+
+.detailPageContentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2.44rem;
+  margin-top: 3.63rem;
+  padding: 0 4.94rem;
+}
+
+.detailPageHashTags {
+  display: flex;
+  flex-direction: row;
+  gap: 1.19rem;
+  color: #9db8ff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.detailPageContents {
+  display: flex;
+  flex-direction: column;
+  gap: 1.31rem;
+  max-width: 62.5625rem;
+}
+
+.detailPageTitle {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.detailPageContent {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 400;
+}

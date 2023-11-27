@@ -1,10 +1,10 @@
 import "./MainBox.css";
 
 export default function MainBox(props) {
-  const { title, content, imageUrl, date, author } = props;
+  const { title, content, imageUrl, date, profile, author } = props;
   return (
     <div className="mainBoxLayout">
-      <img className="mainBoxImage" src={imageUrl} alt="미리보기" />
+      <img className="mainBoxImage" src={imageUrl[0]} alt="미리보기" />
       <div className="mainBox">
         <div className="mainBoxContent">
           <h1>{title}</h1>
@@ -13,7 +13,7 @@ export default function MainBox(props) {
         <h3>{date}</h3>
       </div>
       <div className="mainBoxProfile">
-        <img className="mainBoxProfileImage" alt="profile" />
+        <img className="mainBoxProfileImage" src={profile} alt="profile" />
         <h4>by</h4>
         <h5>{author}</h5>
       </div>
