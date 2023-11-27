@@ -1,0 +1,20 @@
+.pageIndicator {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  align-items: center;
+}
+
+.indicatorDot {
+  width: 0.5625rem;
+  height: 0.5625rem;
+  border-radius: 50%;
+  background-color: #d3d3d3;
+}
+
+.indicatorDot.active {
+  width: 0.6875rem;
+  height: 0.6875rem;
+  background-color: #191970;
+}
