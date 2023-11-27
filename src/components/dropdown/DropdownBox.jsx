@@ -2,9 +2,8 @@ import { useState } from "react";
 import "../dropdown/Dropdown.css";
 import Dropdown from "./Dropdown";
 
-export default function DropdownBox() {
+export default function DropdownBox({ selectedItem, setSelectedItem }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState("");
 
   const handleClick = () => {
     setIsDropdownOpen(!isDropdownOpen);

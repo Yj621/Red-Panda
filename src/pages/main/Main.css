@@ -1,0 +1,52 @@
+.mainPageLayout {
+  display: flex;
+  justify-content: center;
+}
+
+.mainPageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.47rem;
+}
+
+.mainPageDropdown {
+  display: flex;
+  width: 100%;
+}
+
+.mainPageBox {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2.31rem 7rem;
+  justify-items: center;
+}
+
+.mainPageBox > * {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .mainPageBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .mainPageBox {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mainPageBox {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1500) {
+  .mainPageBox {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
