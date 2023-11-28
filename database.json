@@ -6,7 +6,7 @@
       "content": "첫 번째 글의 내용입니다.",
       "imageUrl": ["image_url1", "image_url2"],
       "date": "2023-11-27",
-      "profile": "profile_image_url",
+      "profile": "image_url2",
       "author": "작성자1",
       "hashTags": ["웹", "ICT", "소프트웨어"]
     },
@@ -16,7 +16,7 @@
       "content": "두 번째 글의 내용입니다.",
       "imageUrl": ["image_url1", "image_url2"],
       "date": "2023-11-26",
-      "profile": "profile_image_url",
+      "profile": "image_url1",
       "author": "작성자2"
     },
     {
@@ -25,7 +25,7 @@
       "content": "세 번째 글의 내용입니다.",
       "imageUrl": ["image_url1", "image_url2"],
       "date": "2023-11-25",
-      "profile": "profile_image_url",
+      "profile": "image_url2",
       "author": "작성자3"
     },
     {
@@ -34,7 +34,7 @@
       "content": "네 번째 글의 내용입니다.",
       "imageUrl": ["image_url1", "image_url2"],
       "date": "2023-11-24",
-      "profile": "profile_image_url",
+      "profile": "image_url1",
       "author": "작성자4"
     },
     {
@@ -43,7 +43,7 @@
       "content": "다섯 번째 글의 내용입니다.",
       "imageUrl": ["image_url1", "image_url2"],
       "date": "2023-11-23",
-      "profile": "profile_image_url",
+      "profile": "image_url2",
       "author": "작성자5"
     },
     {
@@ -52,7 +52,7 @@
       "content": "여섯 번째 글의 내용입니다.",
       "imageUrl": ["image_url1", "image_url2"],
       "date": "2023-09-22",
-      "profile": "profile_image_url",
+      "profile": "image_url1",
       "author": "작성자6"
     },
     {
@@ -61,7 +61,7 @@
       "content": "일곱 번째 글의 내용입니다.",
       "imageUrl": ["image_url1", "image_url2"],
       "date": "2023-10-21",
-      "profile": "profile_image_url",
+      "profile": "image_url2",
       "author": "작성자7"
     },
     {
@@ -70,7 +70,7 @@
       "content": "여덟 번째 글의 내용입니다.",
       "imageUrl": ["image_url1", "image_url2"],
       "date": "2023-10-20",
-      "profile": "profile_image_url",
+      "profile": "image_url1",
       "author": "작성자8"
     }
   ]
