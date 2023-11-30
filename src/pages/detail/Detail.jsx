@@ -19,12 +19,7 @@ export default function Detail() {
         const response = await axios.get(
           `http://localhost:4000/contents/${id}`
         );
-        const detailedContent = {
-          ...response.data,
-          imageUrl: response.data.imageUrl.map((name) => images[name]),
-          profile: images[response.data.profile],
-        };
-        setContent(detailedContent);
+        setContent(response.data);
       } catch (error) {
         console.error("Error fetching data: ", error);
       }

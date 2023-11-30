@@ -19,12 +19,7 @@ export default function Main() {
     const fetchData = async () => {
       try {
         const response = await axios.get("http://localhost:4000/contents");
-        const contents = response.data.map((content) => ({
-          ...content,
-          imageUrl: content.imageUrl.map((name) => images[name]),
-          profile: images[content.profile],
-        }));
-        setMainBoxContents(contents);
+        setMainBoxContents(response.data);
       } catch (error) {
         console.error("Error fetching data: ", error);
       }
