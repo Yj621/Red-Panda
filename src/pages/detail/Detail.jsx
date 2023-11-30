@@ -1,14 +1,36 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 import "./Detail.css";
 import PageIndicator from "../../components/pagination/Pagination";
+import image_url1 from "../../images/teamlogo.jpeg";
+import image_url2 from "../../images/image1.png";
+
+const images = { image_url1, image_url2 };
 
 export default function Detail() {
-  const location = useLocation();
-  const content = location.state.content;
-  console.log(content);
-
+  const { id } = useParams();
+  const [content, setContent] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:4000/contents/${id}`
+        );
+        const detailedContent = {
+          ...response.data,
+          imageUrl: response.data.imageUrl.map((name) => images[name]),
+          profile: images[response.data.profile],
+        };
+        setContent(detailedContent);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+    fetchData();
+  }, [id]);
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? 0 : prevIndex - 1));
