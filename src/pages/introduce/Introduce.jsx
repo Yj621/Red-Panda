@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 import teamLogo from "../../images/teamlogo.jpeg";
 import yj from "../../images/yj.jpeg";
 import je from "../../images/je.png";
+import kh from "../../images/kh.jpeg";
 import "./Introduce.css";
 
 function Introduce() {
   const [show, setShow] = useState(false);
   const [showJe, setShowJe] = useState(false);
+  const [showKh, setShowKh] = useState(false);
   const [opacityYj, setOpacityYj] = useState(0);
   const [opacityJe, setOpacityJe] = useState(0);
+  const [opacityKh, setOpacityKh] = useState(0);
+  const [showYjText, setShowYjText] = useState(false);
 
   const buttonStyle = {
     background: "none",
@@ -36,6 +40,13 @@ function Introduce() {
     transition: "opacity 0.5s ease-in",
   };
 
+  const textAfterImageStyle = {
+    display: "flex",
+    flexDirection: "column",
+    marginLeft: "20px",
+    visibility: (showJe || showKh) && show ? "visible" : "hidden", // showJe 또는 showKh가 true이고 show가 true일 때 표시
+  };
+
   const handleButtonClick = () => {
     setShow(true);
   };
@@ -44,10 +55,21 @@ function Introduce() {
     const showImages = () => {
       setTimeout(() => {
         setOpacityYj(1);
-      }, 1000);
-      setTimeout(() => {
         setShowJe(true);
-      }, 2000);
+      }, 1000);
+  
+      setTimeout(() => {
+        setShowYjText(true);
+      }, 1000);
+  
+      setTimeout(() => {
+        setOpacityJe(1);
+        setShowKh(true); // Set showKh to true when "최지은" is fully visible
+      }, 3000);
+  
+      setTimeout(() => {
+        setOpacityKh(1);
+      }, 3500); // Adjust the timing for "이강후"
     };
   
     if (show) {
@@ -75,22 +97,44 @@ function Introduce() {
           <img src={teamLogo} alt="team logo" style={{ width: "200px", height: "150px" }} />
         </div>
 
-        <div>
-          {show && (
-            <div>
+        {show && (
+          <div style={textAfterImageStyle}>
+            <div style={{ display: "flex", alignItems: "center" }}>
               <img src={yj} alt="yj" style={{ ...imgStyle, opacity: opacityYj }} />
-              {showJe && (
-                <div>
+              {showYjText && (
+                <div style={{ marginLeft: "10px", opacity: opacityYj }}>
+                  <p>정윤지</p>
                   <hr />
-                  <img src={je} alt="je" style={{ ...imgStyle, opacity: opacityJe }} />
+                  <p>만든 페이지: 팀 소개 페이지</p>
+                  <p>역할: 팀장, PPT</p>
                 </div>
               )}
             </div>
-          )}
-        </div>
+            {showJe && (
+              <div style={{ display: "flex", alignItems: "center", marginTop: "20px" }}>
+                <img src={je} alt="je" style={{ ...imgStyle, opacity: opacityJe }} />
+                <div style={{ marginLeft: "10px", opacity: opacityJe }}>
+                  <p>최지은</p>
+                  <hr />
+                  <p>만든 페이지: 홈 페이지</p>
+                  <p>역할: 자료 정리, 디자인</p>
+                </div>
+              </div>
+            )}
+            {showKh && (
+              <div style={{ display: "flex", alignItems: "center", marginTop: "20px" }}>
+                <img src={kh} alt="kh" style={{ ...imgStyle, opacity: opacityKh }} />
+                <div style={{ marginLeft: "10px", opacity: opacityKh }}>
+                  <p>이강후</p>
+                  <hr />
+                  <p>만든 페이지: [페이지 이름]</p>
+                  <p>역할: [역할 설명]</p>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
-
-      <br />
     </div>
   );
 }
