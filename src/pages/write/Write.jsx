@@ -72,7 +72,7 @@ function Write() {
         ))}
         <button onClick={handleAddImageInput} className='addbtn'>추가</button>
       </div>
-      <button onClick={addNewData}>Add Data</button>
+      <button onClick={addNewData}>작성 완료</button>
     </div>
   );
 }
