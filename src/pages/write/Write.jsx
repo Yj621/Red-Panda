@@ -22,13 +22,30 @@ function Write() {
     newImageUrls[index] = e.target.value; // 해당 인덱스의 이미지 URL 업데이트
     setImageUrls(newImageUrls);
   };
+  const getYYMMDD = () => {
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    let month = String(currentDate.getMonth() + 1);
+    let day = String(currentDate.getDate());
+
+    if (month.length === 1) {
+      month = `0${month}`;
+    }
+    if (day.length === 1) {
+      day = `0${day}`;
+    }
+
+    return `${year}-${month}-${day}`;
+  };
 
   const addNewData = async () => {
     try {
+      const day = getYYMMDD();
       const response = await axios.post('http://localhost:4000/contents', {
         title,
         content,
-        imageUrl: imageUrls.filter((url) => url.trim() !== ''), // 비어있는 이미지 URL 제외
+        imageUrl: imageUrls.filter((url) => url.trim() !== ''),
+        date: day ,
       });
 
       console.log('New data added:', response.data);
