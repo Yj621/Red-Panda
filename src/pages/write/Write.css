@@ -34,3 +34,25 @@
     outline: none;
     background: #FAFAFA;
 }
+.imageUrls input{
+    margin-top: 30%;
+    margin-left: 40%;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: #FAFAFA;
+}
+.adddbtn {
+/* Rectangle 2194 */
+
+position: absolute;
+width: 162px;
+height: 41px;
+left: 96px;
+top: 310px;
+
+background: #9DB8FF;
+border-radius: 50px;
+
+
+}
