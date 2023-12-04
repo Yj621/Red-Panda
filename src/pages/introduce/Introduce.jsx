@@ -3,6 +3,7 @@ import teamLogo from "../../images/teamlogo.jpeg";
 import yj from "../../images/yj.jpeg";
 import je from "../../images/je.png";
 import kh from "../../images/kh.jpeg";
+import gh from "../../images/github.png";
 import "./Introduce.css";
 
 function Introduce() {
@@ -14,21 +15,20 @@ function Introduce() {
   const [opacityKh, setOpacityKh] = useState(0);
   const [showYjText, setShowYjText] = useState(false);
 
-const buttonStyle = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  alignItems: "center",
-  background: "none",
-  border: "none",
-  padding: 0,
-  font: "inherit",
-  cursor: "pointer",
-  outline: "inherit",
-  visibility: show ? "hidden" : "visible", 
-};
-
+  const buttonStyle = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    alignItems: "center",
+    background: "none",
+    border: "none",
+    padding: 0,
+    font: "inherit",
+    cursor: "pointer",
+    outline: "inherit",
+    visibility: show ? "hidden" : "block",
+  };
 
   const textContainerStyle = {
     position: "absolute",
@@ -47,11 +47,13 @@ const buttonStyle = {
   };
 
   const textAfterImageStyle = {
-    display: "relative",
+    display: "flex",
     flexDirection: "column",
-    marginLeft: "20px",
-    visibility: (showJe || showKh) && show ? "visible" : "hidden", // showJe 또는 showKh가 true이고 show가 true일 때 표시
+    alignItems: "center",
+    marginTop: "20px",
+    visibility: (showJe || showKh) && show ? "visible" : "hidden",
   };
+
 
   const handleButtonClick = () => {
     setShow(true);
@@ -63,26 +65,26 @@ const buttonStyle = {
         setOpacityYj(1);
         setShowJe(true);
       }, 1000);
-  
+
       setTimeout(() => {
         setShowYjText(true);
       }, 1000);
-  
+
       setTimeout(() => {
         setOpacityJe(1);
-        setShowKh(true); // Set showKh to true when "최지은" is fully visible
+        setShowKh(true);
       }, 3000);
-  
+
       setTimeout(() => {
         setOpacityKh(1);
-      }, 3500); // Adjust the timing for "이강후"
+      }, 3500);
     };
-  
+
     if (show) {
       showImages();
     }
   }, [show]);
-  
+
   useEffect(() => {
     if (showJe) {
       setTimeout(() => {
@@ -96,18 +98,17 @@ const buttonStyle = {
       <button style={buttonStyle} onClick={handleButtonClick}>
         팀 소개 보기
       </button>
-    <div style={{ display: "relative", justifyContent: "center", alignItems: "center", height: "100vh", position: "relative" }}>
 
-      <div>
+      <div style={{ display: "relative", justifyContent: "center", alignItems: "center", position: "relative" }}>
         <div style={textContainerStyle}>
           <p style={{ fontSize: "40px", margin: "0px" }}>팀 소개</p>
-          <p>레서판다팀</p>
+          <p> &lt; 레서판다팀 &gt; </p>
           <img src={teamLogo} alt="team logo" style={{ width: "200px", height: "150px" }} />
         </div>
-    <div>
+
         {show && (
           <div style={textAfterImageStyle}>
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div style={{ display: "flex", alignItems: "center", paddingTop: "8%" }}>
               <img src={yj} alt="yj" style={{ ...imgStyle, opacity: opacityYj }} />
               {showYjText && (
                 <div style={{ marginLeft: "10px", opacity: opacityYj }}>
@@ -115,17 +116,23 @@ const buttonStyle = {
                   <hr />
                   <p>만든 페이지: 팀 소개 페이지</p>
                   <p>역할: 팀장, PPT</p>
+                  <a href="https://github.com/Yj621" target="_blank" rel="noopener noreferrer">
+                  <img src={gh} alt="GitHub" style={{ ...imgStyle, opacity: opacityJe ,height : "20px", width: "20px"}} />
+                  </a>
                 </div>
               )}
             </div>
             {showJe && (
-              <div style={{ display: "flex", alignItems: "center", marginTop: "20px", paddingLeft : "50%"}}>
-                <img src={je} alt="je" style={{ ...imgStyle, opacity: opacityJe }} />
-                <div style={{ marginLeft: "10px", opacity: opacityJe }}>
+              <div style={{ display: "flex", alignItems: "center", marginTop: "20px", paddingLeft: "30%" }}>
+                <div style={{ display: "flex", flexDirection: "column", marginLeft: "10px", opacity: opacityJe, justifyContent: "flex-end" }}>
                   <p>최지은</p>
                   <hr />
                   <p>만든 페이지: 홈 페이지</p>
                   <p>역할: 자료 정리, 디자인</p>
+                  <a href="https://github.com/Cjieun" target="_blank" rel="noopener noreferrer">
+                    <img src={gh} alt="GitHub" style={{ ...imgStyle, opacity: opacityJe ,height : "20px", width: "20px"}} />
+                  </a>
+                  <img src={je} alt="je" style={{ ...imgStyle, opacity: opacityJe }} />
                 </div>
               </div>
             )}
@@ -135,16 +142,17 @@ const buttonStyle = {
                 <div style={{ marginLeft: "10px", opacity: opacityKh }}>
                   <p>이강후</p>
                   <hr />
-                  <p>만든 페이지: [페이지 이름]</p>
-                  <p>역할: [역할 설명]</p>
+                  <p>만든 페이지: 글 작성 페이지</p>
+                  <p>역할: 발표</p>
+                  <a href="https://github.com/leekanghoo" target="_blank" rel="noopener noreferrer">
+                    <img src={gh} alt="GitHub" style={{ ...imgStyle, opacity: opacityJe ,height : "20px", width: "20px"}} />
+                  </a>
                 </div>
               </div>
             )}
           </div>
         )}
-        </div>
       </div>
-    </div>
     </div>
   );
 }
