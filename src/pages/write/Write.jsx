@@ -87,7 +87,7 @@ function Write() {
             <button onClick={() => handleRemoveImageInput(index)}>삭제</button>
           </div>
         ))}
-        <button onClick={handleAddImageInput} className='addbtn'>추가</button>
+        <button onClick={handleAddImageInput} className='adddbtn'>추가</button>
       </div>
       <button onClick={addNewData}>작성 완료</button>
     </div>

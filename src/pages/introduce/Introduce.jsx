@@ -14,15 +14,21 @@ function Introduce() {
   const [opacityKh, setOpacityKh] = useState(0);
   const [showYjText, setShowYjText] = useState(false);
 
-  const buttonStyle = {
-    background: "none",
-    border: "none",
-    padding: 0,
-    font: "inherit",
-    cursor: "pointer",
-    outline: "inherit",
-    display: show ? "none" : "block",
-  };
+const buttonStyle = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  alignItems: "center",
+  background: "none",
+  border: "none",
+  padding: 0,
+  font: "inherit",
+  cursor: "pointer",
+  outline: "inherit",
+  visibility: show ? "hidden" : "visible", 
+};
+
 
   const textContainerStyle = {
     position: "absolute",
@@ -41,7 +47,7 @@ function Introduce() {
   };
 
   const textAfterImageStyle = {
-    display: "flex",
+    display: "relative",
     flexDirection: "column",
     marginLeft: "20px",
     visibility: (showJe || showKh) && show ? "visible" : "hidden", // showJe 또는 showKh가 true이고 show가 true일 때 표시
@@ -86,17 +92,19 @@ function Introduce() {
   }, [showJe]);
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", position: "relative" }}>
+    <div>
       <button style={buttonStyle} onClick={handleButtonClick}>
         팀 소개 보기
       </button>
+    <div style={{ display: "relative", justifyContent: "center", alignItems: "center", height: "100vh", position: "relative" }}>
+
       <div>
         <div style={textContainerStyle}>
           <p style={{ fontSize: "40px", margin: "0px" }}>팀 소개</p>
           <p>레서판다팀</p>
           <img src={teamLogo} alt="team logo" style={{ width: "200px", height: "150px" }} />
         </div>
-
+    <div>
         {show && (
           <div style={textAfterImageStyle}>
             <div style={{ display: "flex", alignItems: "center" }}>
@@ -111,7 +119,7 @@ function Introduce() {
               )}
             </div>
             {showJe && (
-              <div style={{ display: "flex", alignItems: "center", marginTop: "20px" }}>
+              <div style={{ display: "flex", alignItems: "center", marginTop: "20px", paddingLeft : "50%"}}>
                 <img src={je} alt="je" style={{ ...imgStyle, opacity: opacityJe }} />
                 <div style={{ marginLeft: "10px", opacity: opacityJe }}>
                   <p>최지은</p>
@@ -134,7 +142,9 @@ function Introduce() {
             )}
           </div>
         )}
+        </div>
       </div>
+    </div>
     </div>
   );
 }
