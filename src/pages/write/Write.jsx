@@ -68,13 +68,17 @@ function Write() {
         />
       </div>
       <div className='content'>
-        <input
+        <textarea
           type='text'
           placeholder='내용을 입력하세요'
           value={content}
           onChange={(e) => setContent(e.target.value)}
+	  rows={25}
+	  cols={150}
+	  style={{ border: 'none', outline: 'none', resize: 'none', overflow: 'hidden',background:'#FAFAFA' }}
         />
       </div>
+	  <div className='test'>
       <div className='imageUrls'>
         {imageUrls.map((url, index) => (
           <div key={index} className='imageUrl'>
@@ -84,13 +88,14 @@ function Write() {
               value={url}
               onChange={(e) => handleImageInputChange(index, e)}
             />
-            <button onClick={() => handleRemoveImageInput(index)}>삭제</button>
-          </div>
+            <button onClick={() => handleRemoveImageInput(index)} className='bt'>삭제</button>
+          </div> 
         ))}
-        <button onClick={handleAddImageInput} className='addbtn'>추가</button>
+        <button onClick={handleAddImageInput} className='bt'>추가</button>
       </div>
       <button onClick={addNewData}>작성 완료</button>
     </div>
+</div>
   );
 }
 

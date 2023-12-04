@@ -25,15 +25,6 @@
     background: #FAFAFA;
 }
 
-
-.content input{
-    margin-top: 30%;
-    margin-left: 40%;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    background: #FAFAFA;
-}
 .imageUrls input{
     margin-top: 30%;
     margin-left: 40%;
@@ -41,8 +32,27 @@
     border: none;
     outline: none;
     background: #FAFAFA;
+
 }
-.adddbtn {
+.content {
+    margin-top: 30%;
+    margin-left: 40%;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    resize: none;
+    background: #FAFAFA;
+    overflow-wrap: break-word;
+    background: #FAFAFA;
+}
+/*.test {	
+    display: flex;
+    flexDirection: row;
+    alignItems: center;
+    flexWrap: wrap;
+}*/
+
+.btn {
 /* Rectangle 2194 */
 
 position: absolute;
