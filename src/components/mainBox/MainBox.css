@@ -22,7 +22,14 @@
   border-bottom: 0.01563rem solid #d3d3d3;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
+}
+
+.mainBoxContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 h1 {

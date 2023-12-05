@@ -1,10 +1,3 @@
-import React from "react";
-import Main from "./main/Main";
-import { useOutlet } from "react-router-dom";
-
-function Home() {
-  const outlet = useOutlet();
-  return <>{outlet || <Main />}</>;
-}
+function Home() {}
 
 export default Home;

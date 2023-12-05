@@ -10,12 +10,12 @@
 }
 
 .mainPageDropdown {
-  display: flex;
   width: 100%;
+  display: flex;
 }
 
 .mainPageBox {
-  min-width: 100rem;
+  min-width: 80rem;
   margin: 0;
   padding: 0;
   display: grid;
@@ -48,6 +48,6 @@
 
 @media screen and (min-width: 1500) {
   .mainPageBox {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }

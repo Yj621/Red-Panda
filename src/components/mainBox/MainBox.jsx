@@ -1,7 +1,7 @@
 import "./MainBox.css";
 
 export default function MainBox(props) {
-  const { title, content, imageUrl, date, profile, author } = props;
+  const { title, content, imageUrl, date, profile } = props;
   return (
     <div className="mainBoxLayout">
       <img className="mainBoxImage" src={imageUrl[0]} alt="미리보기" />
@@ -15,7 +15,7 @@ export default function MainBox(props) {
       <div className="mainBoxProfile">
         <img className="mainBoxProfileImage" src={profile} alt="profile" />
         <h4>by</h4>
-        <h5>{author}</h5>
+        <h5>red panda</h5>
       </div>
     </div>
   );

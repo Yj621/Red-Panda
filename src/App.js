@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Home from "./pages/Home";
+import Introduce from "./pages/introduce/Introduce";
+import Write from "./pages/write/Write";
+import Header from "./components/header/Header";
+import "./App.css";
+import Detail from "./pages/detail/Detail";
+import Main from "./pages/main/Main";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("Main");
+  const [selectedContentId, setSelectedContentId] = useState(null);
+
+  const handlePageChange = (page, contentId = null) => {
+    setCurrentPage(page);
+    setSelectedContentId(contentId);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header handlePageChange={handlePageChange} currentPage={currentPage} />
+      {currentPage === "Main" && <Main handlePageChange={handlePageChange} />}
+      {currentPage === "Introduce" && <Introduce />}
+      {currentPage === "Write" && <Write />}
+      {currentPage === "Detail" && (
+        <Detail
+          contentId={selectedContentId}
+          handlePageChange={handlePageChange}
+        />
+      )}
     </div>
   );
 }

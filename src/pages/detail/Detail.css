@@ -74,6 +74,7 @@
   flex-direction: column;
   gap: 1.31rem;
   max-width: 62.5625rem;
+  align-items: flex-start;
 }
 
 .detailPageTitle {
@@ -85,5 +86,34 @@
 .detailPageContent {
   color: #000;
   font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.detailButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10rem;
+  margin-left: 5rem;
+  align-items: center;
+}
+
+.detailBack {
+  color: #36454f;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.deleteButton {
+  width: 11rem;
+  height: 2.4375rem;
+  border-radius: 0.625rem;
+  background-color: #9db8ff;
+  border: none;
+  cursor: pointer;
+  color: #36454f;
+  font-size: 1rem;
   font-weight: 400;
 }

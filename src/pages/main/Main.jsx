@@ -1,17 +1,10 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import DropdownBox from "../../components/dropdown/DropdownBox";
 import MainBox from "../../components/mainBox/MainBox";
 import "./Main.css";
-import image_url1 from "../../images/teamlogo.jpeg";
-import image_url2 from "../../images/image1.png";
 import axios from "axios";
 
-const images = { image_url1, image_url2 };
-
-export default function Main() {
-  const navigate = useNavigate();
-
+export default function Main({ handlePageChange }) {
   const [selectedItem, setSelectedItem] = useState("최신");
   const [mainBoxContents, setMainBoxContents] = useState([]);
 
@@ -81,9 +74,7 @@ export default function Main() {
           {filteredContents.map((content) => (
             <div
               key={content.id}
-              onClick={() =>
-                navigate(`/detail/${content.id}`, { state: { content } })
-              }
+              onClick={() => handlePageChange("Detail", content.id)}
             >
               <MainBox {...content} />
             </div>

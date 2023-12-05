@@ -1,15 +1,9 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./Detail.css";
 import PageIndicator from "../../components/pagination/Pagination";
-import image_url1 from "../../images/teamlogo.jpeg";
-import image_url2 from "../../images/image1.png";
 
-const images = { image_url1, image_url2 };
-
-export default function Detail() {
-  const { id } = useParams();
+export default function Detail({ contentId, handlePageChange }) {
   const [content, setContent] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -17,7 +11,7 @@ export default function Detail() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/contents/${id}`
+          `http://localhost:4000/contents/${contentId}`
         );
         setContent(response.data);
       } catch (error) {
@@ -25,7 +19,7 @@ export default function Detail() {
       }
     };
     fetchData();
-  }, [id]);
+  }, [contentId]);
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? 0 : prevIndex - 1));
@@ -37,6 +31,19 @@ export default function Detail() {
         ? content.imageUrl.length - 1
         : prevIndex + 1
     );
+  };
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`http://localhost:4000/contents/${contentId}`);
+      handlePageChange("Main");
+    } catch (error) {
+      console.error("Error deleting data: ", error);
+    }
+  };
+
+  const handleBack = () => {
+    handlePageChange("Main");
   };
 
   return (
@@ -108,6 +115,14 @@ export default function Detail() {
                 <span className="detailPageTitle">{content.title}</span>
                 <span className="detailPageContent">{content.content}</span>
               </div>
+            </div>
+            <div className="detailButton">
+              <div className="detailBack" onClick={handleBack}>
+                뒤로가기
+              </div>
+              <button className="deleteButton" onClick={handleDelete}>
+                삭제하기
+              </button>
             </div>
           </div>
         </div>

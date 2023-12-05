@@ -21,12 +21,14 @@ a {
   color: #36454f;
   font-size: 1.25rem;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .headerItemActive {
   color: #191970;
   font-size: 1.25rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .headerButton {

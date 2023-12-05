@@ -42,30 +42,6 @@
       "author": "작성자3"
     },
     {
-      "id": 4,
-      "title": "네 번째 글",
-      "content": "네 번째 글의 내용입니다.",
-      "imageUrl": [
-        "https://dimg.donga.com/wps/NEWS/IMAGE/2019/04/25/95215551.1.jpg",
-        "https://mblogthumb-phinf.pstatic.net/MjAxODEwMTFfMjI3/MDAxNTM5MjMyOTMyMjMy.o2ilgGvxeQENI6dsWaKesBRfgZS2nNGwiaj_1HXOYEwg.puc_6WOpVJL9BANQAwsCcaI6U78nvoJCDgCDRF2Hlr8g.JPEG.nationalrnd/yay-13065490.jpg?type=w800"
-      ],
-      "date": "2023-11-24",
-      "profile": "https://post-phinf.pstatic.net/MjAxOTEwMjZfMjQz/MDAxNTcyMDYzMzg0ODI0.ZqBcnkpvLkmMrOsvFFx_cwY-i3gOOi2NSVdiL-m7ryMg.j2C3Ql1Bp2l4hPsAHcWWT64yMSPylqhTUIacJzIKgfcg.JPEG/dog2.jpg?type=w800_q75",
-      "author": "작성자4"
-    },
-    {
-      "id": 5,
-      "title": "다섯 번째 글",
-      "content": "다섯 번째 글의 내용입니다.",
-      "imageUrl": [
-        "https://mblogthumb-phinf.pstatic.net/MjAxODEwMTFfMjI3/MDAxNTM5MjMyOTMyMjMy.o2ilgGvxeQENI6dsWaKesBRfgZS2nNGwiaj_1HXOYEwg.puc_6WOpVJL9BANQAwsCcaI6U78nvoJCDgCDRF2Hlr8g.JPEG.nationalrnd/yay-13065490.jpg?type=w800",
-        "https://dimg.donga.com/wps/NEWS/IMAGE/2019/04/25/95215551.1.jpg"
-      ],
-      "date": "2023-11-23",
-      "profile": "https://post-phinf.pstatic.net/MjAxOTEwMjZfMjQz/MDAxNTcyMDYzMzg0ODI0.ZqBcnkpvLkmMrOsvFFx_cwY-i3gOOi2NSVdiL-m7ryMg.j2C3Ql1Bp2l4hPsAHcWWT64yMSPylqhTUIacJzIKgfcg.JPEG/dog2.jpg?type=w800_q75",
-      "author": "작성자5"
-    },
-    {
       "id": 6,
       "title": "여섯 번째 글",
       "content": "여섯 번째 글의 내용입니다.",
@@ -73,7 +49,7 @@
         "https://dimg.donga.com/wps/NEWS/IMAGE/2019/04/25/95215551.1.jpg",
         "https://mblogthumb-phinf.pstatic.net/MjAxODEwMTFfMjI3/MDAxNTM5MjMyOTMyMjMy.o2ilgGvxeQENI6dsWaKesBRfgZS2nNGwiaj_1HXOYEwg.puc_6WOpVJL9BANQAwsCcaI6U78nvoJCDgCDRF2Hlr8g.JPEG.nationalrnd/yay-13065490.jpg?type=w800"
       ],
-      "date": "2023-09-22",
+      "date": "2023-12-01",
       "profile": "https://post-phinf.pstatic.net/MjAxOTEwMjZfMjQz/MDAxNTcyMDYzMzg0ODI0.ZqBcnkpvLkmMrOsvFFx_cwY-i3gOOi2NSVdiL-m7ryMg.j2C3Ql1Bp2l4hPsAHcWWT64yMSPylqhTUIacJzIKgfcg.JPEG/dog2.jpg?type=w800_q75",
       "author": "작성자6"
     },
@@ -85,7 +61,7 @@
         "https://mblogthumb-phinf.pstatic.net/MjAxODEwMTFfMjI3/MDAxNTM5MjMyOTMyMjMy.o2ilgGvxeQENI6dsWaKesBRfgZS2nNGwiaj_1HXOYEwg.puc_6WOpVJL9BANQAwsCcaI6U78nvoJCDgCDRF2Hlr8g.JPEG.nationalrnd/yay-13065490.jpg?type=w800",
         "https://dimg.donga.com/wps/NEWS/IMAGE/2019/04/25/95215551.1.jpg"
       ],
-      "date": "2023-10-21",
+      "date": "2023-12-02",
       "profile": "https://post-phinf.pstatic.net/MjAxOTEwMjZfMjQz/MDAxNTcyMDYzMzg0ODI0.ZqBcnkpvLkmMrOsvFFx_cwY-i3gOOi2NSVdiL-m7ryMg.j2C3Ql1Bp2l4hPsAHcWWT64yMSPylqhTUIacJzIKgfcg.JPEG/dog2.jpg?type=w800_q75",
       "author": "작성자7"
     },
@@ -97,7 +73,7 @@
         "https://dimg.donga.com/wps/NEWS/IMAGE/2019/04/25/95215551.1.jpg",
         "https://mblogthumb-phinf.pstatic.net/MjAxODEwMTFfMjI3/MDAxNTM5MjMyOTMyMjMy.o2ilgGvxeQENI6dsWaKesBRfgZS2nNGwiaj_1HXOYEwg.puc_6WOpVJL9BANQAwsCcaI6U78nvoJCDgCDRF2Hlr8g.JPEG.nationalrnd/yay-13065490.jpg?type=w800"
       ],
-      "date": "2023-10-20",
+      "date": "2023-12-05",
       "profile": "https://post-phinf.pstatic.net/MjAxOTEwMjZfMjQz/MDAxNTcyMDYzMzg0ODI0.ZqBcnkpvLkmMrOsvFFx_cwY-i3gOOi2NSVdiL-m7ryMg.j2C3Ql1Bp2l4hPsAHcWWT64yMSPylqhTUIacJzIKgfcg.JPEG/dog2.jpg?type=w800_q75",
       "author": "작성자8"
     },

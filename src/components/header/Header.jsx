@@ -1,32 +1,28 @@
-import { NavLink } from "react-router-dom";
+import React from "react";
 import "./Header.css";
 
-export default function Header() {
+export default function Header({ currentPage, handlePageChange }) {
   return (
     <header>
       <div className="headerBox">
-        <NavLink
-          exact
-          to="/"
-          className={({ isActive }) =>
-            isActive ? "headerItemActive" : "headerItem"
-          }
+        <div
+          className={currentPage === "Main" ? "headerItemActive" : "headerItem"}
+          onClick={() => handlePageChange("Main")}
         >
           홈
-        </NavLink>
-        <NavLink
-          exact
-          to="/introduce"
-          className={({ isActive }) =>
-            isActive ? "headerItemActive" : "headerItem"
+        </div>
+        <div
+          className={
+            currentPage === "Introduce" ? "headerItemActive" : "headerItem"
           }
+          onClick={() => handlePageChange("Introduce")}
         >
           팀 소개
-        </NavLink>
+        </div>
       </div>
-      <NavLink to="/write" className="headerButton">
+      <div className="headerButton" onClick={() => handlePageChange("Write")}>
         새 글 작성
-      </NavLink>
+      </div>
     </header>
   );
 }
