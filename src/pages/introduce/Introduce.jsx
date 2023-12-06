@@ -111,41 +111,47 @@ function Introduce() {
             <div style={{ display: "flex", alignItems: "center", paddingTop: "8%" }}>
               <img src={yj} alt="yj" style={{ ...imgStyle, opacity: opacityYj }} />
               {showYjText && (
-                <div style={{ marginLeft: "10px", opacity: opacityYj }}>
+                <div style={{ marginLeft: "10px", opacity: opacityYj, textAlign: "left" }}>
                   <p>정윤지</p>
                   <hr />
                   <p>만든 페이지: 팀 소개 페이지</p>
                   <p>역할: 팀장, PPT</p>
                   <a href="https://github.com/Yj621" target="_blank" rel="noopener noreferrer">
-                  <img src={gh} alt="GitHub" style={{ ...imgStyle, opacity: opacityJe ,height : "20px", width: "20px"}} />
+                    <img src={gh} alt="GitHub" style={{ ...imgStyle, opacity: opacityYj, height: "20px", width: "20px" }} />
                   </a>
                 </div>
               )}
             </div>
             {showJe && (
-              <div style={{ display: "flex", alignItems: "center", marginTop: "20px", paddingLeft: "30%" }}>
-                <div style={{ display: "flex", flexDirection: "column", marginLeft: "10px", opacity: opacityJe, justifyContent: "flex-end" }}>
+              <div style={{ display: "flex", alignItems: "center", marginTop: "20px", paddingLeft: "50%"}}>
+                <div style={{ marginLeft: "10px", opacity: opacityJe, textAlign: "right"  }}>
                   <p>최지은</p>
                   <hr />
                   <p>만든 페이지: 홈 페이지</p>
                   <p>역할: 자료 정리, 디자인</p>
-                  <a href="https://github.com/Cjieun" target="_blank" rel="noopener noreferrer">
-                    <img src={gh} alt="GitHub" style={{ ...imgStyle, opacity: opacityJe ,height : "20px", width: "20px"}} />
-                  </a>
-                  <img src={je} alt="je" style={{ ...imgStyle, opacity: opacityJe }} />
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
+                    <a href="https://github.com/Cjieun" target="_blank" rel="noopener noreferrer">
+                      <img src={gh} alt="GitHub" style={{ ...imgStyle, opacity: opacityJe, height: "20px", width: "20px" }} />
+                    </a>
+                  </div>
+                </div>
+                <div style={{ marginLeft: "10px", textAlign: "right" }}>
+                  <img src={je} alt="je" style={{ ...imgStyle, opacity: opacityJe, float: "right" }} />
                 </div>
               </div>
             )}
+
+
             {showKh && (
               <div style={{ display: "flex", alignItems: "center", marginTop: "20px" }}>
                 <img src={kh} alt="kh" style={{ ...imgStyle, opacity: opacityKh }} />
-                <div style={{ marginLeft: "10px", opacity: opacityKh }}>
+                <div style={{ marginLeft: "10px", opacity: opacityKh, textAlign: "left" }}>
                   <p>이강후</p>
                   <hr />
                   <p>만든 페이지: 글 작성 페이지</p>
                   <p>역할: 발표</p>
                   <a href="https://github.com/leekanghoo" target="_blank" rel="noopener noreferrer">
-                    <img src={gh} alt="GitHub" style={{ ...imgStyle, opacity: opacityJe ,height : "20px", width: "20px"}} />
+                    <img src={gh} alt="GitHub" style={{ ...imgStyle, opacity: opacityJe, height: "20px", width: "20px" }} />
                   </a>
                 </div>
               </div>
