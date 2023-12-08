@@ -42,8 +42,13 @@
     outline: none;
     background: #FAFAFA;
 }
-.adddbtn {
-/* Rectangle 2194 */
+.imageUrls .imageUrl {
+    display: flex;
+    justify-content: space-between; /* 각 이미지 URL 입력란 오른쪽에 버튼을 두기 위해 추가 */
+    margin-bottom: 10px;
+}
+
+/*.adddbtn {
 
 position: absolute;
 width: 162px;
@@ -55,4 +60,4 @@ background: #9DB8FF;
 border-radius: 50px;
 
 
-}
+}*/

@@ -78,20 +78,27 @@ function Write() {
       <div className='imageUrls'>
         {imageUrls.map((url, index) => (
           <div key={index} className='imageUrl'>
-            <input
-              type='text'
-              placeholder={`이미지 URL ${index + 1}`}
-              value={url}
-              onChange={(e) => handleImageInputChange(index, e)}
-            />
-            <button onClick={() => handleRemoveImageInput(index)}>삭제</button>
+            <div className='inputContainer'>
+              <input
+                type='text'
+                placeholder={`이미지 URL ${index + 1}`}
+                value={url}
+                onChange={(e) => handleImageInputChange(index, e)}
+              />
+              {index === imageUrls.length - 1 && (
+                <>
+                  <button onClick={() => handleRemoveImageInput(index)}>삭제</button>
+                  <button onClick={handleAddImageInput} className='adddbtn'>추가</button>
+                </>
+              )}
+            </div>
           </div>
         ))}
-        <button onClick={handleAddImageInput} className='adddbtn'>추가</button>
       </div>
       <button onClick={addNewData}>작성 완료</button>
     </div>
   );
-}
+  
+} 
 
 export default Write;
