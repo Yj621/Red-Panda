@@ -26,13 +26,18 @@
 }
 
 
-.content input{
+.content {
     margin-top: 30%;
     margin-left: 40%;
     font-size: 20px;
     border: none;
     outline: none;
+    resize: none;
     background: #FAFAFA;
+    overflow-wrap: break-word;
+}
+.contentTA{
+    font-size : 30px;
 }
 .imageUrls input{
     margin-top: 30%;
@@ -73,6 +78,7 @@
     
 
 }
+
 .delBtn {
 
     width: 162px !important;

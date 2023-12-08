@@ -68,11 +68,14 @@ function Write() {
         />
       </div>
       <div className='content'>
-        <input
+        <textarea className='contentTA'
           type='text'
           placeholder='내용을 입력하세요'
           value={content}
           onChange={(e) => setContent(e.target.value)}
+          rows={15}
+          cols={70}
+          style={{ border: 'none', outline: 'none', resize: 'none', overflow: 'hidden',background:'#FAFAFA' }}
         />
       </div>
       <div className='imageUrls'>
