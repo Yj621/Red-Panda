@@ -104,7 +104,7 @@ function Write() {
       </div>
       <button onClick={addNewData} className='done'>작성 완료</button>
       <form action='/' className='backBtn'>
-        <input type='submit' value='뒤로가기'/>
+        <input type='submit' value='← 뒤로가기'/>
       </form>
     </div>
   );
