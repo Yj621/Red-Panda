@@ -17,12 +17,15 @@
 }
 
 
-.title input{
-    margin-left:35%;
+.title input {
+    margin-left: 35%;
     font-size: 30px;
+    width: 1600px;
     border: none;
     outline: none;
     background: #FAFAFA;
+    font-weight: bold;
+    font-family: 'nanumsquare';
 }
 
 
@@ -36,27 +39,36 @@
     background: #FAFAFA;
     overflow-wrap: break-word;
 }
-.contentTA{
-    font-size : 30px;
+
+.contentTA {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'nanumsquare';
 }
-.imageUrls input{
+
+.imageUrls input {
     margin-top: 30%;
     margin-left: 40%;
     font-size: 20px;
     border: none;
     outline: none;
     background: #FAFAFA;
+    font-family: 'nanumsquare';
 }
+
 .imageUrls .inputContainer {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* 추가 */
-    
+    align-items: center;
+    /* 추가 */
+
 }
 
-.imageUrls button{
-    white-space: nowrap;;
+.imageUrls button {
+    white-space: nowrap;
+    ;
 }
+
 .addBtn {
 
     width: 162px !important;
@@ -75,7 +87,7 @@
     align-items: center;
     padding: 5px 10px;
     margin-right: 20px;
-    
+
 
 }
 
@@ -96,9 +108,36 @@
     display: flex;
     align-items: center;
     padding: 5px 10px;
-    
-    
-    
+
+
+
+}
+
+.done {
+    position: absolute;
+    width: 90px !important;
+    height: 40px;
+    bottom: 50px;
+    right: 50px;
+
+
+    background: #9DB8FF;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.backBtn input{
+    position: absolute;
+    width: 90px ;
+    height: 40px;
+    bottom: 50px;
+    left: 50px;
+
+
+    background: #9DB8FF;
+    border-radius: 10px;
+    border: none;
     
 
 }

@@ -56,6 +56,8 @@ function Write() {
       console.error('Error adding data:', error);
     }
   };
+    
+  
 
   return (
     <div className='writemain'>
@@ -74,7 +76,7 @@ function Write() {
           value={content}
           onChange={(e) => setContent(e.target.value)}
           rows={15}
-          cols={70}
+          cols={120}
           style={{ border: 'none', outline: 'none', resize: 'none', overflow: 'hidden',background:'#FAFAFA' }}
         />
       </div>
@@ -100,7 +102,10 @@ function Write() {
           </div>
         ))}
       </div>
-      <button onClick={addNewData}>작성 완료</button>
+      <button onClick={addNewData} className='done'>작성 완료</button>
+      <form action='/' className='backBtn'>
+        <input type='submit' value='뒤로가기'/>
+      </form>
     </div>
   );
   
