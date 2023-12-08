@@ -46,18 +46,53 @@
     display: flex;
     justify-content: space-between;
     align-items: center; /* 추가 */
+    
 }
 
-/*.addbtn {
+.imageUrls button{
+    white-space: nowrap;;
+}
+.addBtn {
 
-position: absolute;
-width: 162px;
-height: 41px;
-left: 96px;
-top: 310px;
+    width: 162px !important;
+    height: 27px;
+    left: 96px;
+    top: 310px;
+    background: #9DB8FF;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin-right: 20px;
+    
 
-background: #9DB8FF;
-border-radius: 50px;
+}
+.delBtn {
 
+    width: 162px !important;
+    height: 27px;
+    left: 96px;
+    top: 310px;
+    background: none;
+    border-radius: 10px;
+    border: 1px solid #9DB8FF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    
+    
+    
+    
 
-}*/
+}

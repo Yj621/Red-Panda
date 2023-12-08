@@ -87,9 +87,9 @@ function Write() {
               />
               {index === imageUrls.length - 1 && (
                 <>
-                  <button onClick={handleAddImageInput} className='addbtn'>추가</button>
+                  <button onClick={handleAddImageInput} className='addBtn'>추가</button>
                   {imageUrls.length > 1 && (
-                    <button onClick={() => handleRemoveImageInput(index)}>삭제</button>
+                    <button onClick={() => handleRemoveImageInput(index)} className='delBtn'>삭제</button>
                   )}
                 </>
               )}
