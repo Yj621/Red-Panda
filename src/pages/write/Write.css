@@ -42,13 +42,13 @@
     outline: none;
     background: #FAFAFA;
 }
-.imageUrls .imageUrl {
+.imageUrls .inputContainer {
     display: flex;
-    justify-content: space-between; /* 각 이미지 URL 입력란 오른쪽에 버튼을 두기 위해 추가 */
-    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center; /* 추가 */
 }
 
-/*.adddbtn {
+/*.addbtn {
 
 position: absolute;
 width: 162px;

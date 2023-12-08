@@ -87,8 +87,10 @@ function Write() {
               />
               {index === imageUrls.length - 1 && (
                 <>
-                  <button onClick={() => handleRemoveImageInput(index)}>삭제</button>
-                  <button onClick={handleAddImageInput} className='adddbtn'>추가</button>
+                  <button onClick={handleAddImageInput} className='addbtn'>추가</button>
+                  {imageUrls.length > 1 && (
+                    <button onClick={() => handleRemoveImageInput(index)}>삭제</button>
+                  )}
                 </>
               )}
             </div>
@@ -98,6 +100,7 @@ function Write() {
       <button onClick={addNewData}>작성 완료</button>
     </div>
   );
+  
   
 } 
 
